@@ -1,0 +1,1 @@
+Content-Security-Policy: default-src 'self'; script-src 'nonce-Y2FmZWJhYmVjYWZlYmFiZQ' 'strict-dynamic' 'unsafe-inline' https:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests; report-uri /csp-reports; report-to csp-endpoint

@@ -1,0 +1,53 @@
+{
+  "name": "cspdoctor",
+  "version": "0.1.0",
+  "description": "Parses a Content-Security-Policy and flags unsafe-inline, wildcards and missing directives — a dedicated CSP linter with actionable rules and CI-ready exit codes.",
+  "author": "JaydenCJ",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "cspdoctor": "dist/cli.js"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test \"tests/*.test.mjs\"",
+    "smoke": "bash scripts/smoke.sh"
+  },
+  "keywords": [
+    "content-security-policy",
+    "csp",
+    "security-headers",
+    "linter",
+    "xss",
+    "security",
+    "cli"
+  ],
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JaydenCJ/cspdoctor.git"
+  },
+  "homepage": "https://github.com/JaydenCJ/cspdoctor#readme",
+  "bugs": {
+    "url": "https://github.com/JaydenCJ/cspdoctor/issues"
+  }
+}

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="440" viewBox="0 0 760 440" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="13">
+  <rect width="760" height="440" rx="10" fill="#0d1117"/>
+  <rect width="760" height="34" rx="10" fill="#161b22"/>
+  <circle cx="20" cy="17" r="6" fill="#ff5f57"/>
+  <circle cx="40" cy="17" r="6" fill="#febc2e"/>
+  <circle cx="60" cy="17" r="6" fill="#28c840"/>
+  <text x="380" y="21" fill="#8b949e" text-anchor="middle">cspdoctor — the CSP linter that explains itself</text>
+
+  <text x="24" y="64" fill="#7ee787">$ cspdoctor check --file headers.txt</text>
+  <text x="24" y="88" fill="#c9d1d9">policy 1 (enforced): 5 directives — 5 errors, 4 warnings, 3 info</text>
+
+  <text x="24" y="118" fill="#c9d1d9">  <tspan fill="#f85149">error E110</tspan> script-src › 'unsafe-inline'</text>
+  <text x="24" y="138" fill="#8b949e">      'unsafe-inline' lets every injected &lt;script&gt; run — it turns off the</text>
+  <text x="24" y="156" fill="#8b949e">      XSS protection CSP exists to provide</text>
+  <text x="24" y="176" fill="#3fb950">      fix: move inline code to nonced or hashed scripts</text>
+
+  <text x="24" y="206" fill="#c9d1d9">  <tspan fill="#f85149">error E113</tspan> script-src › https:</text>
+  <text x="24" y="226" fill="#8b949e">      https: is not "HTTPS only" — it allows every HTTPS origin on the internet</text>
+
+  <text x="24" y="256" fill="#c9d1d9">  <tspan fill="#f85149">error E101</tspan> style-src › unsafe-inline</text>
+  <text x="24" y="276" fill="#8b949e">      unsafe-inline has no quotes, so browsers read it as a host named "unsafe-inline"</text>
+
+  <text x="24" y="306" fill="#c9d1d9">  <tspan fill="#d29922">warning W215</tspan> script-src › ajax.googleapis.com</text>
+  <text x="24" y="326" fill="#8b949e">      known CSP bypass — it hosts AngularJS and other gadget-rich libraries</text>
+
+  <text x="24" y="356" fill="#c9d1d9">  <tspan fill="#d29922">warning W207</tspan> base-uri (not set)</text>
+  <text x="24" y="376" fill="#8b949e">      base-uri never falls back to default-src — injected &lt;base&gt; rebases every URL</text>
+
+  <text x="24" y="408" fill="#c9d1d9">cspdoctor: <tspan fill="#f85149">FAIL</tspan> — 5 errors, 4 warnings, 3 info (fail-on: warning)  <tspan fill="#8b949e">exit 1</tspan></text>
+</svg>

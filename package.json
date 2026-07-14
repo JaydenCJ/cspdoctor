@@ -2,7 +2,7 @@
   "name": "cspdoctor",
   "version": "0.1.0",
   "description": "Parses a Content-Security-Policy and flags unsafe-inline, wildcards and missing directives — a dedicated CSP linter with actionable rules and CI-ready exit codes.",
-  "author": "JaydenCJ",
+  "author": "JaydenCJ <aisingioro.kiyon@gmail.com>",
   "license": "MIT",
   "type": "module",
   "bin": {
